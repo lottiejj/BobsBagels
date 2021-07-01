@@ -1,8 +1,8 @@
 class Basket {
-    constructor() {
+    constructor(x) {
         this.items = [];
         // size refers to basket capacity
-        this.size = 2;
+        this.size = x;
     }
     add(item) {
         if(this.items.length < this.size){

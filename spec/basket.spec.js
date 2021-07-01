@@ -5,7 +5,7 @@ let basket, result, expectedResult
 
 // ------------------ test 1
 //setup 1 item
-basket = new Basket ()
+basket = new Basket (3)
 
 //execute 1 item
 result = basket.add("Banana Bagel")
@@ -18,7 +18,7 @@ console.log(assertEquals(result.includes("Banana Bagel"), true))
 // ------------------ test 2
 
 //setup 2 items
-basket = new Basket ()
+basket = new Basket (3)
 
 //execute 2 items
 result1 = basket.add("Banana Bagel")
@@ -34,7 +34,7 @@ console.log(assertEquals(result2.includes("Blueberry Bagel"), true))
 // ------------------ test 3
 
 //setup remove item
-basket = new Basket ()
+basket = new Basket (3)
 basket.add("Banana Bagel")
 
 //execute remove item
@@ -50,7 +50,7 @@ console.log(assertEquals(result.includes("Banana Bagel"), false))
 console.log("Check if its full and then not allow more items")
 
 //setup remove item
-basket = new Basket ()
+basket = new Basket (3)
 basket.add("Banana Bagel")
 basket.add("Blueberry Bagel")
 expectedResult = 0
@@ -66,3 +66,20 @@ result = basket.add("Apple Bagel")
 
 console.log(assertEquals(result, expectedResult))
 console.log(assertEquals(basket.items.includes("Apple Bagel"), false))
+
+// ------------------ test 5
+console.log("Test to see if we can increase size of basket")
+
+//setup remove item
+basket = new Basket (10)
+expectedResult = 10
+
+
+//execute 
+result = basket.size
+console.log(result)
+
+
+//verify remove item
+
+console.log(assertEquals(result, expectedResult))
