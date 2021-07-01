@@ -135,19 +135,23 @@ console.log(result)
 //verify remove item
 console.log(assertEquals(result, expectedResult))
 
+
+
+
+
 // ------------------ test 9
 console.log("Test if i can see the total price of my basket.")
 
 //setup add duplicate
+basket = new Basket(10)
 basket.add("Plain Bagel")
 basket.add("Blueberry Bagel")
+
  //total price of items in basket returns x result is equal to total in basket 
 expectedResult = 3
+result = basket.basketValue(inventory)
 
 //execute 
-console.log('inventory: ')
-console.log(inventory)
-result = inventory['Banana Bagel']
-console.log(result)
+
 //verify remove item
 console.log(assertEquals(result, expectedResult))

@@ -38,15 +38,12 @@ class Basket {
 
         
     }
-    basket(value) {
-        total price of items in basket 
-        //price of one item
-        inventory[this.items.forEach(findPrice())]
-        //all items in the basket should be inventoried
-        return x result is equal to total in basket
-        //sum of items in basket 
+    basketValue (inventory) {
+        
+        let totalPrice = 0
+        this.items.forEach(x => totalPrice += inventory[x])
+        return totalPrice
     } 
-
-
 }
+
 module.exports = Basket
