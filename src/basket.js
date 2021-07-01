@@ -17,12 +17,20 @@ class Basket {
     }
 
     remove(item) {
-        //find the item in the array
-        const index = this.items.indexOf(item);
-        //remove it
-        this.items.splice(index, 1);
-        //return the array
-        return this.items;
+        // if you remove something that isnt there return 0 and say its not there
+        if( this.items.includes(item) ){
+            //find the item in the array
+            const index = this.items.indexOf(item);
+            //remove it
+            this.items.splice(index, 1);
+            //return the array
+            return this.items; 
+        } else {
+            console.log('Cant remove an item thats not already in the basket')
+            return 0
+        }
+
+        
     }
 
 

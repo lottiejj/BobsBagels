@@ -67,6 +67,9 @@ result = basket.add("Apple Bagel")
 console.log(assertEquals(result, expectedResult))
 console.log(assertEquals(basket.items.includes("Apple Bagel"), false))
 
+
+
+
 // ------------------ test 5
 console.log("Test to see if we can increase size of basket")
 
@@ -82,4 +85,19 @@ console.log(result)
 
 //verify remove item
 
+console.log(assertEquals(result, expectedResult))
+
+
+
+// ------------------ test 6
+console.log("Test if i can remove an item thats not there")
+
+//setup remove item
+basket = new Basket (10)
+expectedResult = 0
+
+//execute 
+result = basket.remove('something')
+
+//verify remove item
 console.log(assertEquals(result, expectedResult))
