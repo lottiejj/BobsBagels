@@ -35,9 +35,17 @@ class Basket {
         }
 
 
+
         
     }
-    
+    basket(value) {
+        total price of items in basket 
+        //price of one item
+        inventory[this.items.forEach(findPrice())]
+        //all items in the basket should be inventoried
+        return x result is equal to total in basket
+        //sum of items in basket 
+    } 
 
 
 }
