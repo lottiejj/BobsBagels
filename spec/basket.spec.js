@@ -101,3 +101,20 @@ result = basket.remove('something')
 
 //verify remove item
 console.log(assertEquals(result, expectedResult))
+
+
+// ------------------ test 7
+console.log("Test if i can add duplicate items")
+
+//setup add duplicate
+basket = new Basket (10)
+basket.add("Banana Bagel")
+
+expectedResult = 0
+
+//execute 
+result = basket.add("Banana Bagel")
+ 
+//verify remove item
+console.log(assertEquals(result, expectedResult))
+
