@@ -1,5 +1,6 @@
 const assertEquals =  require("../src/assertEquals.js");
 const Basket = require("../src/basket.js");
+const inventory = require("./../src/inventory.js")
 
 let basket, result, expectedResult
 
@@ -118,3 +119,18 @@ result = basket.add("Banana Bagel")
 //verify remove item
 console.log(assertEquals(result, expectedResult))
 
+
+// ------------------ test 8
+console.log("Test if i can see the price of each item before I add it to my basket.")
+
+//setup add duplicate
+
+expectedResult = 2.5
+
+//execute 
+console.log('inventory: ')
+console.log(inventory)
+result = inventory['Banana Bagel']
+console.log(result)
+//verify remove item
+console.log(assertEquals(result, expectedResult))

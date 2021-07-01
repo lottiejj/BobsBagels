@@ -4,8 +4,8 @@ class Basket {
         // size refers to basket capacity
         this.size = x;
     }
-    add(item) 
-    {   //if I add duplicate item return error message 
+    add(item) {   
+        // if I add duplicate item return error message 
         if(this.items.includes(item) ) { 
             console.log("Item already added")
             return 0
@@ -18,7 +18,6 @@ class Basket {
         } else {
             return 0
         }
-        
     }
 
     remove(item) {
