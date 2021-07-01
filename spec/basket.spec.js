@@ -1,8 +1,9 @@
 const assertEquals =  require("../src/assertEquals.js");
 const Basket = require("../src/basket.js");
 
-let basket, result
+let basket, result, expectedResult
 
+// ------------------ test 1
 //setup 1 item
 basket = new Basket ()
 
@@ -14,6 +15,7 @@ console.log("Can add one item")
 console.log(assertEquals(result.length, 1))
 console.log(assertEquals(result.includes("Banana Bagel"), true))
 
+// ------------------ test 2
 
 //setup 2 items
 basket = new Basket ()
@@ -28,6 +30,9 @@ console.log(assertEquals(result2.length, 2))
 console.log(assertEquals(result1.includes("Banana Bagel"), true))
 console.log(assertEquals(result2.includes("Blueberry Bagel"), true))
 
+
+// ------------------ test 3
+
 //setup remove item
 basket = new Basket ()
 basket.add("Banana Bagel")
@@ -39,3 +44,25 @@ result = basket.remove("Banana Bagel")
 console.log("remove item")
 console.log(assertEquals(result.length, 0))
 console.log(assertEquals(result.includes("Banana Bagel"), false))
+
+
+// ------------------ test 4
+console.log("Check if its full and then not allow more items")
+
+//setup remove item
+basket = new Basket ()
+basket.add("Banana Bagel")
+basket.add("Blueberry Bagel")
+expectedResult = 0
+
+
+//execute remove item
+
+// 1) dont add it to the basket
+// 2) return somethign we can check with
+result = basket.add("Apple Bagel")
+
+//verify remove item
+
+console.log(assertEquals(result, expectedResult))
+console.log(assertEquals(basket.items.includes("Apple Bagel"), false))

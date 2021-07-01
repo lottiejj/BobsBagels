@@ -1,12 +1,19 @@
 class Basket {
     constructor() {
         this.items = [];
+        // size refers to basket capacity
+        this.size = 2;
     }
     add(item) {
-        // insert item into items array
-        this.items.push(item);
-        // return the array
-        return this.items;
+        if(this.items.length < this.size){
+            // insert item into items array
+            this.items.push(item);
+            // return the array
+            return this.items;
+        } else {
+            return 0
+        }
+        
     }
 
     remove(item) {
@@ -17,5 +24,7 @@ class Basket {
         //return the array
         return this.items;
     }
+
+
 }
 module.exports = Basket
